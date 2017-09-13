@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# npm
+node_modules/
+npm*
+*lock*
+*.log
+
+*.js
+jest-preset.json

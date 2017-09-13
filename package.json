@@ -1,0 +1,63 @@
+{
+  "name": "jest-preset-coffeescript",
+  "version": "0.0.0",
+  "description": "Easily write your Jests in CoffeeScript.",
+  "keywords": [
+    "coffee",
+    "coffeescript",
+    "jest",
+    "preset",
+    "transform",
+    "config",
+    "unit",
+    "test"
+  ],
+  "homepage": "https://github.com/danielbayley/jest-preset-coffeescript#readme",
+  "repository": "danielbayley/jest-preset-coffeescript",
+  "bugs": "https://github.com/danielbayley/jest-preset-coffeescript/issues",
+  "author": "Daniel Bayley <daniel.bayley@me.com> (https://github.com/danielbayley)",
+  "license": "MIT",
+  "devDependencies": {
+    "@danielbayley/fabric": "<2",
+    "coffeelint": "^1.16.0",
+    "coffeescript": "^2.0.0-beta5",
+    "husky": "^0.14.3",
+    "jest": "^21.1.0",
+    "lint-staged": "^4.2.1",
+  },
+  "peerDependencies": {
+    "coffeescript": "*",
+    "jest": "*"
+  },
+  "files": [
+    "*.js*"
+  ],
+  "lint-staged": {
+    "{*.*coffee*,Cakefile}": [
+      "coffeelint",
+      "jest --bail --findRelatedTests"
+    ]
+  },
+  "coffeelintConfig": {
+    "extends": "@danielbayley/fabric/coffeelint"
+  },
+  "jest": {
+    "verbose": true,
+    "preset": "./jest-preset.json",
+    "transform": {
+      "coffee": "./index"
+    }
+  },
+  "scripts": {
+    "compile": "npm run compile.coffee",
+    "compile.coffee": "coffee -cb *.coffee",
+    "prepare": "npm run compile",
+    "precommit": "lint-staged",
+    "pretest": "npm run prepare",
+    "test": "npm run test.lint && npm run test.jest",
+    "test.lint": "npm run test.lint.coffee",
+    "test.lint.coffee": "coffeelint --cache -- {test/,}*.*coffee* Cakefile",
+    "test.jest": "jest --onlyChanged",
+    "clean": "rm *.js jest-preset.json"
+  }
+}
