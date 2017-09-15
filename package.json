@@ -52,6 +52,7 @@
     "compile.coffee": "coffee -cb *.coffee",
     "prepare": "npm run compile",
     "precommit": "lint-staged",
+    "prepublishOnly": "CI=true npm test",
     "pretest": "npm run prepare",
     "test": "npm run test.lint && npm run test.jest",
     "test.lint": "npm run test.lint.coffee",
