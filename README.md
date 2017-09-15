@@ -13,9 +13,7 @@ Install
 `npm install jest-preset-coffeescript --save-dev`, then add the following to your `package.json`:
 ~~~ json
 "jest": {
-  "transform": {
-    "coffee": "jest-preset-coffeescript"
-  }
+  "preset": "jest-preset-coffeescript"
 },
 ~~~
 
