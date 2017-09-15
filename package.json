@@ -18,7 +18,6 @@
   "author": "Daniel Bayley <daniel.bayley@me.com> (https://github.com/danielbayley)",
   "license": "MIT",
   "devDependencies": {
-    "@danielbayley/fabric": "<2",
     "coffeelint": "^1.16.0",
     "coffeescript": "^2.0.0-beta5",
     "husky": "^0.14.3",
@@ -39,11 +38,9 @@
       "jest --bail --findRelatedTests"
     ]
   },
-  "coffeelintConfig": {
-    "extends": "@danielbayley/fabric/coffeelint"
-  },
   "jest": {
     "verbose": true,
+    "onlyChanged": true,
     "preset": "./jest-preset.json",
     "transform": {
       "coffee": "./index"
@@ -58,8 +55,8 @@
     "pretest": "npm run prepare",
     "test": "npm run test.lint && npm run test.jest",
     "test.lint": "npm run test.lint.coffee",
-    "test.lint.coffee": "coffeelint --cache -- {test/,}*.*coffee* Cakefile",
-    "test.jest": "jest --onlyChanged",
+    "test.lint.coffee": "coffeelint --cache -- *.coffee test/*.*coffee* Cakefile",
+    "test.jest": "jest ${CI+--all}",
     "clean": "rm *.js jest-preset.json"
   }
 }
