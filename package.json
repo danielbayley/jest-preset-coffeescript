@@ -24,6 +24,7 @@
     "husky": "^0.14.3",
     "jest": "^21.1.0",
     "lint-staged": "^4.2.1",
+    "nanomatch": "^1.2.3"
   },
   "peerDependencies": {
     "coffeescript": "*",
@@ -49,7 +50,8 @@
     }
   },
   "scripts": {
-    "compile": "npm run compile.coffee",
+    "compile": "npm run compile.preset & npm run compile.coffee",
+    "compile.preset": "cake generate > jest-preset.json",
     "compile.coffee": "coffee -cb *.coffee",
     "prepare": "npm run compile",
     "precommit": "lint-staged",
