@@ -19,19 +19,32 @@
   "license": "MIT",
   "devDependencies": {
     "coffeelint": "^1.16.0",
-    "coffeescript": "^2.0.0-beta5",
+    "coffeescript": "^2",
     "husky": "^0.14.3",
     "jest": "^21.1.0",
     "lint-staged": "^4.2.1",
     "nanomatch": "^1.2.3"
   },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-preset-jest": "^21.0.2"
+  },
   "peerDependencies": {
-    "coffeescript": "*",
-    "jest": "*"
+    "coffeescript": "^2",
+    "jest": "^21.1.0"
   },
   "files": [
     "*.js*"
   ],
+  "babel": {
+    "plugins": [
+      "transform-es2015-modules-commonjs"
+    ],
+    "presets": [
+      "jest"
+    ]
+  },
   "lint-staged": {
     "{*.*coffee*,Cakefile}": [
       "coffeelint",
@@ -49,15 +62,15 @@
   "scripts": {
     "compile": "npm run compile.preset & npm run compile.coffee",
     "compile.preset": "cake generate > jest-preset.json",
-    "compile.coffee": "coffee -cb *.coffee",
+    "compile.coffee": "coffee --compile --bare --transpile *.coffee",
     "prepare": "npm run compile",
     "precommit": "lint-staged",
     "prepublishOnly": "CI=true npm test",
     "pretest": "npm run prepare",
     "test": "npm run test.lint && npm run test.jest",
     "test.lint": "npm run test.lint.coffee",
-    "test.lint.coffee": "coffeelint --cache -- *.coffee test/*.*coffee* Cakefile",
-    "test.jest": "jest ${CI+--all}",
+    "test.lint.coffee": "coffeelint -- *.coffee test/*.*coffee* Cakefile",
+    "test.jest": "jest ${CI+--all --no-cache}",
     "clean": "rm *.js jest-preset.json"
   }
 }

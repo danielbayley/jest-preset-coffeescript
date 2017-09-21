@@ -1,6 +1,6 @@
 #! node_modules/.bin/jest -o
-{basename, extname} = require 'path'
-index = require '..'
+import {basename, extname} from 'path'
+import index from '..'
 
 describe "#{basename __filename}", =>
   it "exports a process method", =>
@@ -9,3 +9,7 @@ describe "#{basename __filename}", =>
 describe "CoffeeScript", =>
   it "transforms #{extname __filename} files", =>
     expect("A spade").toBe "A spade"
+
+  it "works with Promises/await", =>
+    n = await new Promise (resolve) => resolve 1
+    expect(n).toBe 1

@@ -4,7 +4,7 @@ This is a literate CoffeeScript file.
 
 ~~~ coffee
 
-    {extname} = require 'path'
+    import {extname} from 'path'
 
     describe "Literate CoffeeScript", =>
       it "tranforms #{extname __filename} files", =>

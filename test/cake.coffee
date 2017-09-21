@@ -1,7 +1,7 @@
 #! node_modules/.bin/jest -o
-match = require 'nanomatch'
-{FILE_EXTENSIONS} = require 'coffeescript'
-preset = require '../jest-preset'#.json
+import match from 'nanomatch'
+import {FILE_EXTENSIONS} from 'coffeescript'
+import preset from '../jest-preset'#.json
 
 describe 'Cakefile', =>
   describe 'generate', =>
