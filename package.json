@@ -70,7 +70,7 @@
     "test": "npm run test.lint && npm run test.jest",
     "test.lint": "npm run test.lint.coffee",
     "test.lint.coffee": "coffeelint -- *.coffee test/*.*coffee* Cakefile",
-    "test.jest": "jest ${CI+--all --no-cache}",
+    "test.jest": "jest ${CI+--all} ${CI+--no-cache}",
     "clean": "rm *.js jest-preset.json"
   }
 }
