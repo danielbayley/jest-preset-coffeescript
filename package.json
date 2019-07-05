@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "babel-preset-jest": "^24.6.0"
+    "babel-preset-jest": "^24.6.0",
+    "snyk": "^1.192.0"
   },
   "peerDependencies": {
     "@babel/core": "^7.4.3",
@@ -71,6 +72,9 @@
     "test.lint": "npm run test.lint.coffee",
     "test.lint.coffee": "coffeelint -- *.coffee test/*.*coffee* Cakefile",
     "test.jest": "jest ${CI+--all} ${CI+--no-cache}",
-    "clean": "rm *.js jest-preset.json"
-  }
+    "clean": "rm *.js jest-preset.json",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
