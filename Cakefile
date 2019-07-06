@@ -6,7 +6,7 @@ task 'generate', "Generate Jest preset JSON config.", =>
   preset =
     moduleFileExtensions: [ 'js', 'json', coffee... ]
     transform: "#{glob}": process.env.npm_package_name
-    testRegex: "tests?/.*\\.(#{glob})$"
+    testRegex: ".*(test|spec).*\\.(#{glob})$"
     testPathIgnorePatterns: [ 'node_modules', 'fixtures' ]
 
   # coffeelint: disable=no_debugger

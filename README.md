@@ -6,7 +6,7 @@ Easily write your [_Jest_]s in CoffeeScript.
 
 Automatically handles [_transform_]ation, including even tests written in _[literate]_ CoffeeScript.
 
-This will work on any `.`\[[`lit`]\][`coffee`]\[[`.md`]\] file in your `test`[`s`] folder by default.
+This will work on any `.`\[[`lit`]\][`coffee`]\[[`.md`]\] file in your `test`/`spec`[`s`] folder by default.
 
 Install
 -------
