@@ -12,6 +12,7 @@ task 'generate', "Generate Jest preset JSON config.", =>
     testPathIgnorePatterns: ['node_modules', 'fixtures']
     transform: [glob]: package_json.name
     mapCoverage: true
+    setupFilesAfterEnv: ['./index']
 
   package_json.jest.transform = [glob]: './index'
   fs.writeFileSync 'package.json', JSON.stringify package_json, null, 2

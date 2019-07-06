@@ -11,3 +11,8 @@ exports.process = (source, file) =>
     presets: ['jest']
 
   compile source, { bare: true, inlineMap: true, transpile }
+
+if describe?
+  override = describe
+  # coffeelint: disable=no_backticks FIXME
+  `describe = (name, fn) => override (name, () => { fn() })`
