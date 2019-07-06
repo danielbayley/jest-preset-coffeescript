@@ -7,7 +7,7 @@ exports.process = (source, file) =>
     source = h.invertLiterate source
 
   transpile =
-    plugins: ['transform-es2015-modules-commonjs']
+    plugins: ['@babel/transform-modules-commonjs']
     presets: ['jest']
 
   compile source, { bare: true, inlineMap: true, transpile }
