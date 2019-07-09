@@ -10,10 +10,10 @@ This will work on any `.`\[[`lit`]\][`coffee`]\[[`.md`]\] file in your `test`/`s
 
 Install
 -------
-`npm install jest-preset-coffeescript --save-dev`, then add the following to your `package.json`:
+`npm install @danielbayley/jest-preset-coffeescript --save-dev`, then add the following to your `package.json`:
 ~~~ json
 "jest": {
-  "preset": "jest-preset-coffeescript"
+  "preset": "@danielbayley/jest-preset-coffeescript"
 },
 ~~~
 

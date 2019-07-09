@@ -1,5 +1,5 @@
 {
-  "name": "jest-preset-coffeescript",
+  "name": "@danielbayley/jest-preset-coffeescript",
   "version": "1.1.0",
   "description": "Easily write your Jests in CoffeeScript.",
   "keywords": [
@@ -33,6 +33,9 @@
     "@babel/core": "^7.5.0",
     "coffeescript": "^2.4.1",
     "jest": "^24.8.0"
+  },
+  "publishConfig": {
+    "@danielbayley:registry": "https://npm.pkg.github.com"
   },
   "files": [
     "*.js*"
