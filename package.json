@@ -21,7 +21,7 @@
     "coffeelint": "^2.1.0",
     "coffeescript": "^2.4.1",
     "husky": "^3.0.0",
-    "jest": "^24.8.0",
+    "jest": "^25.2.3",
     "lint-staged": "^10.0.9",
     "nanomatch": "^1.2.13"
   },
@@ -32,7 +32,7 @@
   "peerDependencies": {
     "@babel/core": "^7.5.0",
     "coffeescript": "^2.4.1",
-    "jest": "^24.8.0"
+    "jest": "^25.2.3"
   },
   "files": [
     "*.js*"
