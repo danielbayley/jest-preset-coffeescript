@@ -57,10 +57,7 @@
     "preset": "./jest-preset.json",
     "transform": {
       "coffee|litcoffee|coffee.md": "./index"
-    },
-    "setupFilesAfterEnv": [
-      "./index"
-    ]
+    }
   },
   "scripts": {
     "compile": "npm run compile.preset & npm run compile.coffee",
