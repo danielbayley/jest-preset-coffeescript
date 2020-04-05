@@ -10,7 +10,12 @@ This will work on any `.`\[[`lit`]\][`coffee`]\[[`.md`]\] file in your `test`/`s
 
 Install
 -------
-`npm install @danielbayley/jest-preset-coffeescript --save-dev`, then add the following to your `package.json`:
+Assuming you already have `npm` [setup] to work with GitHub Packages:
+~~~ sh
+npm config set @danielbayley:registry https://npm.pkg.github.com
+npm install @danielbayley/jest-preset-coffeescript --save-dev
+~~~
+Then add the following to your `package.json`:
 ~~~ json
 "jest": {
   "preset": "@danielbayley/jest-preset-coffeescript"
@@ -36,3 +41,5 @@ License
 [`lit`]:            test/index.litcoffee
 [`coffee`]:         test/index.coffee
 [`.md`]:            test/index.coffee.md
+
+[setup]:            https://help.github.com/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#authenticating-to-github-package-registry

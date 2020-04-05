@@ -1,7 +1,7 @@
 #! node_modules/.bin/jest --onlyChanged
 import {extname} from 'path'
 import {compile, FILE_EXTENSIONS} from 'coffeescript'
-import {defaults as exampleConfig} from 'jest-config' #@jest/types
+import {defaults as exampleConfig} from 'jest-config'
 import {validate, multipleValidOptions} from 'jest-validate'
 import {isMatch} from 'micromatch'
 import preset from '..'
@@ -20,7 +20,6 @@ describe main[2..], =>
 
   describe "CoffeeScript", =>
     it "transforms #{extname __filename} files", =>
-      #expect("A spade").toBe "A spade"
       source = '=>'
       js = compile source, bare: true
       expect(preset.process source, __filename).toMatch RegExp js
@@ -38,10 +37,8 @@ describe main[2..], =>
       it "includes #{ext}", =>
         expect(preset.moduleFileExtensions).toContain ext
 
-    describe "testMatch", => #jest --listTests
-      #regex = new RegExp preset.testRegex
+    describe "testMatch", =>
       it "matches .#{ext} files", =>
-        #expect("test/file.#{ext}").toMatch regex
         resolve = (glob) => glob.replace '<rootDir>', '.'
         glob = preset.testMatch.map resolve
         expect(isMatch "test/file.#{ext}", glob).toBe true
@@ -49,5 +46,4 @@ describe main[2..], =>
     describe "transform", =>
       [glob] = Object.keys preset.transform
       it "matches .#{ext} files", =>
-        #expect(match ext, glob).toContain ext
         expect(isMatch ext, "(#{glob})").toBe true
