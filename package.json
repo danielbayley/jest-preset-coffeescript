@@ -48,6 +48,14 @@
       "jest"
     ]
   },
+  "coffeelintConfig": {
+    "no_unnecessary_fat_arrows": {
+      "level": "ignore"
+    },
+    "max_line_length": {
+      "level": "warn"
+    }
+  },
   "lint-staged": {
     "*.@(coffee|litcoffee|coffee.md)": [
       "coffeelint",
