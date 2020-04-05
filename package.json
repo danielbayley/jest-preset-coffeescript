@@ -1,6 +1,6 @@
 {
   "name": "@danielbayley/jest-preset-coffeescript",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Easily write your Jests in CoffeeScript.",
   "keywords": [
     "coffee",
