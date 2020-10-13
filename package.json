@@ -73,7 +73,7 @@
   "scripts": {
     "prepare": "coffee --compile --bare --transpile *.coffee",
     "precommit": "lint-staged",
-    "prepublishOnly": "CI=true npm test",
+    "prepublishOnly": "GITHUB_ACTIONS=true npm test",
     "prerelease": "git stash --include-untracked",
     "release": "npm version --",
     "postversion": "git push --follow-tags && npm publish && git stash pop --index",
@@ -81,7 +81,7 @@
     "test": "npm run test.lint && npm run test.jest",
     "test.lint": "npm run test.lint.coffee",
     "test.lint.coffee": "coffeelint -- *.coffee test/*.*coffee*",
-    "test.jest": "jest ${CI+--ci --all --no-cache}",
+    "test.jest": "jest ${GITHUB_ACTIONS+--ci --all --no-cache}",
     "clean": "rm -f jest-preset.js* & jest --clearCache --config {}"
   }
 }

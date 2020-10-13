@@ -1,5 +1,3 @@
-[![badge][ci]][circle]
-
 [_Jest_] + [CoffeeScript]
 =========================
 Easily write your [_Jest_]s in CoffeeScript.
@@ -28,9 +26,6 @@ License
 
 [MIT]:              LICENSE.md
 [Daniel Bayley]:    https://github.com/danielbayley
-
-[ci]:               https://img.shields.io/circleci/project/danielbayley/jest-preset-coffeescript.svg?style=flat-square
-[circle]:           https://circleci.com/gh/danielbayley/jest-preset-coffeescript
 
 [_jest_]:           https://facebook.github.io/jest
 [_transform_]:      https://facebook.github.io/jest/docs/en/configuration.html#transform-object-string-string
