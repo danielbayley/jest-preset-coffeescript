@@ -78,10 +78,10 @@
     "release": "npm version --",
     "postversion": "git push --follow-tags && npm publish && git stash pop --index",
     "pretest": "npm run prepare",
-    "test": "npm run test.lint && npm run test.jest",
+    "test": "npm run test.lint && npm run test.jest --",
     "test.lint": "npm run test.lint.coffee",
     "test.lint.coffee": "coffeelint -- *.coffee test/*.*coffee*",
-    "test.jest": "jest ${GITHUB_ACTIONS+--ci --all --no-cache}",
-    "clean": "rm -f jest-preset.js* & jest --clearCache --config {}"
+    "test.jest": "jest ${GITHUB_ACTIONS+--all --ci --no-cache}",
+    "clean": "rm -f *.js & jest --clearCache --config {}"
   }
 }

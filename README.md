@@ -37,4 +37,4 @@ License
 [`coffee`]:         test/index.coffee
 [`.md`]:            test/index.coffee.md
 
-[setup]:            https://help.github.com/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#authenticating-to-github-package-registry
+[setup]:       https://help.github.com/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#authenticating-to-github-package-registry

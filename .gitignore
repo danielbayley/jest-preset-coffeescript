@@ -8,4 +8,3 @@ npm*
 *.log
 
 *.js
-jest-preset.json
