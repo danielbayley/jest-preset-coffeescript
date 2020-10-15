@@ -19,22 +19,22 @@
   "license": "MIT",
   "devDependencies": {
     "coffeelint": "^2.1.0",
-    "coffeescript": "^2.4.1",
-    "husky": "^4.2.3",
-    "jest": "^26.0.0",
-    "jest-config": "^26.0.0",
-    "jest-validate": "^26.0.0",
-    "lint-staged": "^10.1.1",
+    "coffeescript": "^2.5.1",
+    "husky": "^4.3.0",
+    "jest": "^26.5.3",
+    "jest-config": "^26.5.3",
+    "jest-validate": "^26.5.3",
+    "lint-staged": "^10.4.0",
     "micromatch": "^4.0.2"
   },
   "dependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
-    "babel-preset-jest": "^26.0.0"
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
+    "babel-preset-jest": "^26.5.0"
   },
   "peerDependencies": {
-    "@babel/core": "^7.5.0",
-    "coffeescript": "^2.4.1",
-    "jest": "^26.0.0"
+    "@babel/core": "^7.12.0",
+    "coffeescript": "^2.5.1",
+    "jest": "^26.5.3"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
