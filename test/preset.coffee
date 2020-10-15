@@ -1,4 +1,3 @@
-#! node_modules/.bin/jest --onlyChanged
 import {extname} from 'path'
 import {compile, FILE_EXTENSIONS} from 'coffeescript'
 import {defaults as exampleConfig} from 'jest-config'
