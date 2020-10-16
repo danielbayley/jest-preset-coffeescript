@@ -8,13 +8,16 @@ This will work on any `.`\[[`lit`]\][`coffee`]\[[`.md`]\] file in your `test`/`s
 
 Install
 -------
-Assuming you already have `npm` [configured] to work with GitHub Packages:
+Assuming you already:
+1. [configured] `npm` to work with GitHub Packages
+2. `install`ed [`peerDependencies`]
 ~~~ sh
 npm config set @danielbayley:registry https://npm.pkg.github.com
 npm install @danielbayley/jest-preset-coffeescript --save-dev
 ~~~
-Then add the following to your `package.json`:
-~~~ json
+Then add the following to your Jest [configuration]:
+~~~ js
+// package.json
 "jest": {
   "preset": "@danielbayley/jest-preset-coffeescript"
 },
@@ -24,17 +27,19 @@ License
 -------
 [MIT] © [Daniel Bayley]
 
-[MIT]:              LICENSE.md
-[Daniel Bayley]:    https://github.com/danielbayley
+[MIT]:                LICENSE.md
+[Daniel Bayley]:      https://github.com/danielbayley
 
-[_jest_]:           https://facebook.github.io/jest
-[_transform_]:      https://facebook.github.io/jest/docs/en/configuration.html#transform-object-string-string
+[_jest_]:             https://jestjs.io
+[configuration]:      https://jestjs.io/docs/configuration
+[_transform_]:        https://jestjs.io/docs/en/configuration#transform-objectstring-pathtotransformer--pathtotransformer-object
 
-[coffeescript]:     http://coffeescript.org
-[literate]:         http://coffeescript.org/#literate
+[coffeescript]:       http://coffeescript.org
+[literate]:           http://coffeescript.org/#literate
 
-[`lit`]:            test/index.litcoffee
-[`coffee`]:         test/index.coffee
-[`.md`]:            test/index.coffee.md
+[`lit`]:              test/index.litcoffee
+[`coffee`]:           test/index.coffee
+[`.md`]:              test/index.coffee.md
 
-[configured]:       https://help.github.com/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#authenticating-to-github-package-registry
+[configured]:         https://help.github.com/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#authenticating-to-github-package-registry
+[`peerDependencies`]: https://docs.npmjs.com/files/package.json#peerdependencies
