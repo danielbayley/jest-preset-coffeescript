@@ -28,13 +28,14 @@
     "micromatch": "^4.0.2"
   },
   "dependencies": {
+    "@babel/core": "^7.12.1",
     "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "babel-preset-jest": "^26.5.0",
     "source-map-support": "danielbayley/node-source-map-support#patch-1"
   },
   "peerDependencies": {
     "coffeescript": "2.x",
-    "jest": ">= 17.0.0 < 26"
+    "jest": ">= 25.0.0 < 27"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
