@@ -10,7 +10,7 @@ Install
 -------
 Assuming you already:
 1. [configured] `npm` to work with GitHub Packages
-2. `install`ed [`peerDependencies`]
+2. ensured [`peerDependencies`] are `install`ed
 ~~~ sh
 npm config set @danielbayley:registry https://npm.pkg.github.com
 npm install @danielbayley/jest-preset-coffeescript --save-dev
@@ -42,4 +42,4 @@ License
 [`.md`]:              test/index.coffee.md
 
 [configured]:         https://help.github.com/packages/using-github-packages-with-your-projects-ecosystem/configuring-npm-for-use-with-github-packages#authenticating-to-github-package-registry
-[`peerDependencies`]: https://docs.npmjs.com/files/package.json#peerdependencies
+[`peerDependencies`]: https://github.com/danielbayley/jest-preset-coffeescript/blob/master/package.json#L36-L38
