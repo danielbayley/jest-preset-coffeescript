@@ -23,7 +23,7 @@
     "husky": "^4.3.0",
     "jest": "^26.5.3",
     "jest-config": "^26.5.3",
-    "jest-validate": "^26.5.3",
+    "jest-validate": "^27.0.1",
     "lint-staged": "^10.4.0",
     "micromatch": "^4.0.2"
   },
