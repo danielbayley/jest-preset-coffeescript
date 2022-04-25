@@ -22,7 +22,7 @@
     "coffeescript": "^2.5.1",
     "husky": "^4.3.0",
     "jest": "^26.5.3",
-    "jest-config": "^26.5.3",
+    "jest-config": "^28.0.0",
     "jest-validate": "^26.5.3",
     "lint-staged": "^10.4.0",
     "micromatch": "^4.0.2"
