@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
-import {compile, helpers as h, FILE_EXTENSIONS} from 'coffeescript'
+import { FILE_EXTENSIONS} from 'coffeescript'
+import { transform } from '@babel/core'
 
 coffee = FILE_EXTENSIONS.map (ext) => ext[1..]
 
@@ -13,17 +14,5 @@ module.exports =
   moduleFileExtensions: ['js', 'json', coffee...]
   testMatch: ["<rootDir>/*@(test|spec)?(s){/**/,}*.@(#{coffee.join '|'})"]
   testPathIgnorePatterns: ['node_modules', 'fixtures']
-  transform: [coffee.join '|']: __filename
+  transform: [coffee.join '|']: path.join __dirname, 'transform-coffee'
   setupFilesAfterEnv: [__filename ]
-
-  process: (source, file) =>
-    return source unless h.isCoffee file
-
-    if h.isLiterate file
-      source = h.invertLiterate source
-
-    transpile =
-      plugins: ['@babel/transform-modules-commonjs']
-      presets: ['jest']
-
-    compile source, { bare: true, inlineMap: true, transpile }

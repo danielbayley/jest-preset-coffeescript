@@ -4,6 +4,7 @@ import {defaults as exampleConfig} from 'jest-config'
 import {validate, multipleValidOptions} from 'jest-validate'
 import {isMatch} from 'micromatch'
 import preset from '..'
+import transformCoffee from '../transform-coffee'
 import {main} from '../package'#.json
 
 describe main[2..], =>
@@ -15,13 +16,14 @@ describe main[2..], =>
     expect(isValid).toBe true
 
   it "exports a #{process} method", =>
-    expect(preset).toMatchObject process: expect.any Function
+    expect(transformCoffee).toMatchObject process: expect.any Function
 
   describe "CoffeeScript", =>
     it "transforms #{extname __filename} files", =>
       source = '=>'
-      js = compile source, bare: true
-      expect(preset.process source, __filename).toMatch RegExp js
+      js = compile source, bare: true, header: false
+      transformed = transformCoffee.process source, __filename
+      expect(transformed.code).toMatch RegExp js
 
     it "works with Promises/await", =>
       n = await new Promise (resolve) => resolve 1
